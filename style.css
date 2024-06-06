@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 75px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+.navbar-links li {
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.navbar-links li:hover {
+    background-color: rgb(255, 95, 122);
+    transition-duration: 0.5s;
+    border-radius: 5px;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar-links a:hover {
+    color: white;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+}
+
+.navbar-links.active {
+    display: flex;
+}
+
+.hero-section {
+    background: url('restaurant.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: white;
+    color: black;
+    border: 2px solid #ff6347;
+    transition: 0.5s;
+}
+
+.about-section {
+    background-color: rgb(255, 220, 226);
+}
+
+.menu-section {
+    background-color: #ffcfc7;
+}
+
+.menu-section, .about-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-section h2, .about-section h2, .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 350px;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.contact-section {
+    background-color: rgb(166, 255, 166);
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-section label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-section input, .contact-section textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-section button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#home {
+    /* border: 2px solid black; */
+    background-image: url(https://images.pexels.com/photos/827215/pexels-photo-827215.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    background-color: #ff6347;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 1s;
+}
+
+.btn:hover {
+    background-color: white;
+    /* border: 2px solid #ff6347; */
+    cursor: pointer;
+    transition: 1s;
+}
+
+.fi img, .s img, .t img, .fo img {
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.fi img:hover, .s img:hover, .t img:hover, .fo img:hover {
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+
+.footer {
+    background-color: #282828;
+    color: #ffffff;
+    padding: 60px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-col h4::after {
+    content: '';
+    background-color: #ff6347;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer-col .social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-col .social-links a {
+    color: #bbb;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-col .social-links a:hover {
+    color: #ff6347;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col ul {
+        padding-left: 0;
+    }
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.main-for-order {
+    border: 2px solid black;
+    text-align: center;
+}
+
+.main-for-three {
+    border: 2px solid black;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one {
+    border: 2px solid black;
+    height: 580px;
+    width: 32%;
+}
+
+.pizza1, .pizza2 {
+    border: 2px solid black;
+    height: 48%;
+}
+
+/* styles.css */
+
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.menu-item {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 300px;
+    background-color: #ffffff;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+}
+
+.menu-item button {
+    background-color: #28a745;
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-item button:hover {
+    background-color: #218838;
+}
+
+#menu {
+    display: flex;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+}
+
+.wow h1 {
+    font-size: 40px;
+    padding: 20px;
+}
+
+.wow {
+    background-color: rgb(255, 255, 184);
+
+}
+
+.menu-item:hover {
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
